@@ -1,0 +1,9 @@
+# APT29 – Gruppenprofil und Begründung der Auswahl
+
+## Gruppenprofil
+
+APT29, auch bekannt als Cozy Bear, Midnight Blizzard, NOBELIUM und The Dukes, ist eine russische, staatlich unterstützte Advanced Persistent Threat-Gruppe, die dem russischen Auslandsgeheimdienst SWR zugerechnet wird [citation:13]. Die Gruppe ist seit mindestens 2008 aktiv und hat wiederholt Regierungen, diplomatische Einrichtungen, Think Tanks sowie Technologieunternehmen in Europa und Nordamerika angegriffen [citation:13]. Zu den bekanntesten Kampagnen zählen der SolarWinds-Supply-Chain-Angriff aus dem Jahr 2020, bei dem rund 18.000 Organisationen betroffen waren, sowie groß angelegte Kompromittierungen von Microsoft-365-Umgebungen [citation:1][citation:13]. APT29 ist in MITRE ATT&CK unter der Gruppen-ID G0016 dokumentiert und gilt als eine der am umfassendsten analysierten APT-Gruppen [citation:1][citation:16].
+
+## Begründung der Auswahl
+
+Die Auswahl von APT29 für diese Emulation ist aus drei Gründen begründet. Erstens ist APT29 eine der am besten dokumentierten Gruppen in MITRE ATT&CK; MITRE hat eine eigene ATT&CK Evaluation gegen sie durchgeführt, wodurch ein öffentlicher, strukturierter Emulationsplan verfügbar ist, der sich mit MITRE Caldera ausführen lässt [citation:14][citation:18]. Zweitens richtet sich APT29 wiederholt gegen europäische Regierungen und diplomatische Einrichtungen, was einen konkreten EU-Bezug herstellt und die Relevanz für eine österreichische Organisation unterstreicht [citation:11][citation:16]. Drittens deckt die Gruppe eine breite Kill-Chain ab – von Phishing-basiertem Initial Access über Credential Dumping bis hin zu Lateral Movement und Exfiltration – und eignet sich damit ideal, um Detektionslücken in einem SIEM-gestützten Labor zu identifizieren [citation:12][citation:16].
