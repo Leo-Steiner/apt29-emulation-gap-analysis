@@ -42,21 +42,42 @@ Alle projekt-spezifischen Ressourcen wurden gelöscht:
 
 ## 4. Kostenbilanz
 
-### 4.1 Tatsächliche Kosten
+### 4.1 Tatsächliche Kosten (aus Azure Cost Analysis)
 
 | Metrik | Wert |
 |---|---|
-| Gesamtverbrauch | **3,13 USD** |
+| **Gesamtkosten** | **2,76 EUR** |
+| Zeitraum | 2026-10-10 bis 2026-10-16 |
+| Verbrauch in USD (Budget-Ansicht) | 3,13 USD |
 | Budget 1 (`apt29-lab-budget`) | 20,00 USD (80 % Alert bei 16,00 USD) |
 | Budget 2 (`end-budget-now`) | 20,00 USD (100 % Alert bei 20,00 USD) |
-| Verbrauch in % | **15,65 %** |
 | Free-Trial-Guthaben | 200,00 USD |
-| **Verbleibendes Guthaben** | **196,87 USD** |
+| **Verbleibendes Guthaben** | **~196,87 USD** |
 
-### 4.2 Screenshots
+### 4.2 Kostenaufschlüsselung nach Service
 
-**Budgets-Übersicht:**
-![Budgets Overview](evidence/azure_budget_overview.png)
+| Service | Kosten (EUR) | Anteil |
+|---|---|---|
+| Virtual Machines | 1,84 EUR | 67 % |
+| Storage | 0,71 EUR | 26 % |
+| Virtual Network | 0,20 EUR | 7 % |
+| Bandwidth | 0,00 EUR | 0 % |
+| **Gesamt** | **2,76 EUR** | **100 %** |
+
+### 4.3 Kostenaufschlüsselung nach Tag
+
+| Datum | Kosten (EUR) |
+|---|---|
+| 2026-10-15 | 0,54 EUR |
+| 2026-10-16 | 2,22 EUR |
+| **Gesamt** | **2,76 EUR** |
+
+**Hinweis:** Der 16. Oktober war der Hauptarbeitstag (Run 2, Gap-Analyse, Fixes). Der 15. Oktober war der Aufbautag (Azure Lab, Wazuh, Caldera).
+
+### 4.4 Screenshots
+
+**Cost Analysis – Accumulated Costs:**
+![Cost Analysis](evidence/cost-analysis.png)
 
 **Budget `apt29-lab-budget` (80 % Alert):**
 ![apt29-lab-budget](evidence/azure_budget_apt29.png)
@@ -64,22 +85,13 @@ Alle projekt-spezifischen Ressourcen wurden gelöscht:
 **Budget `end-budget-now` (100 % Alert):**
 ![end-budget-now](evidence/azure_budget_end.png)
 
-### 4.3 Aufschlüsselung der Kosten
+### 4.5 Rohdaten
 
-| Ressource | Geschätzte Kosten | Anteil |
-|---|---|---|
-| VM `vm-defender` (Compute) | ~1,20 USD | 38 % |
-| VM `vm-target` (Compute) | ~1,20 USD | 38 % |
-| OS-Disks (2 × Standard SSD) | ~0,50 USD | 16 % |
-| Public IPs (2 × Standard) | ~0,10 USD | 3 % |
-| Netzwerk (VNet, NSGs) | 0,00 USD | 0 % |
-| **Gesamt** | **~3,13 USD** | **100 %** |
-
-**Hinweis:** Die Aufschlüsselung ist eine Schätzung. Die tatsächlichen Werte findest du in der Azure Cost Analysis.
+Die Rohdaten der Kostenanalyse sind in `evidence/cost-analysis.csv` gespeichert.
 
 ## 5. Erkenntnisse zur Kostenkontrolle
 
-1. **Deallocate ist essenziell.** Ohne Deallocate hätten die VMs ~5 €/Tag gekostet. Mit Deallocate lag der Gesamtverbrauch bei nur 3,13 USD für das gesamte Projekt.
+1. **Deallocate ist essenziell.** Ohne Deallocate hätten die VMs ~5 €/Tag gekostet. Mit Deallocate lag der Gesamtverbrauch bei nur 2,76 EUR für das gesamte Projekt.
 
 2. **Budget-Alerts sind Pflicht.** Zwei Alerts (80 % und 100 %) haben frühzeitig gewarnt und das Kostenbewusstsein geschärft.
 
@@ -87,7 +99,7 @@ Alle projekt-spezifischen Ressourcen wurden gelöscht:
 
 4. **Private Repository** vermeidet Plagiatsrisiken und hält die Arbeit geschützt.
 
-5. **Azure Free Trial mit 200 USD** reicht für ein Projekt dieser Größe vollständig aus. Der Verbrauch lag bei nur 1,57 % des Guthabens.
+5. **Azure Free Trial mit 200 USD** reicht für ein Projekt dieser Größe vollständig aus. Der Verbrauch lag bei nur ~1,4 % des Guthabens.
 
 6. **Dynamische Heim-IP** erforderte mehrfache NSG-Anpassungen. Für zukünftige Projekte wäre ein VPN oder eine statische IP hilfreich.
 
@@ -97,7 +109,7 @@ Alle projekt-spezifischen Ressourcen wurden gelöscht:
 - Alle Evidence und Dokumente
 - Azure-Konto (kann für zukünftige Projekte genutzt werden)
 - Kali Linux mit installierten Tools (Azure CLI, Git, VS Code)
-- Restguthaben: 196,87 USD
+- Restguthaben: ~196,87 USD
 
 ## 7. Empfehlungen für zukünftige Projekte
 
@@ -108,3 +120,4 @@ Alle projekt-spezifischen Ressourcen wurden gelöscht:
 | Eine Ressourcengruppe pro Projekt | Einfacher Teardown |
 | Statische IP oder VPN für NSG-Regeln | Weniger manuelle Anpassungen |
 | Regelmäßiger Kosten-Check im Portal | Frühzeitiges Erkennen von Ausreißern |
+| Cost Analysis als CSV exportieren | Reproduzierbare Dokumentation |
