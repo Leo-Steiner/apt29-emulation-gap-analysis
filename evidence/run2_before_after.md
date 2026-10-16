@@ -11,6 +11,7 @@
 | Fix 2 | LSASS ProcessAccess | T1003.001 | Sysmon ProcessAccess + ProcessAccessConfig |
 | Fix 3 | Scheduled Task | T1053.005 | Custom Wazuh-Regeln 100202–100204 |
 | Fix 4 | Persistence Services | T1543.003 | Custom Wazuh-Regeln 100205–100208 |
+| Fix 5 | Collection | T1560.001, T1115, T1056.001 | Custom Wazuh-Regeln 100210–100213 |
 
 ## Vorher/Nachher-Tabelle
 
@@ -25,6 +26,10 @@
 | Persistent Service 2 | T1543.003 | Missed | Detected | ✅ |
 | Artifact Cleanup | T1070.004 | Missed | Detected | ✅ |
 | Process Injection | T1055 | Partial | Partial | ⚠️ |
+| Automated Collection | T1560.001 | Missed | Detected | ✅ |
+| Automated document collection | T1560.001 | Missed | Detected | ✅ |
+| Automated Collection (Clipboard) | T1115 | Missed | Detected | ✅ |
+| Automated Collection (Input Capture) | T1056.001 | Missed | Detected | ✅ |
 
 ## Ergebnis
 
