@@ -1,3 +1,19 @@
+<!-- Custom Wazuh Rules for APT29 Emulation Lab -->
+<!-- Source: Own work, based on Wazuh rule syntax -->
+
+<group name="windows,sysmon,discovery,">
+  <rule id="100200" level="5">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.commandLine">whoami|hostname|ipconfig|systeminfo|echo %USERDOMAIN%</field>
+    <description>Discovery: User/System enumeration via command line</description>
+    <mitre>
+      <id>T1033</id>
+      <id>T1082</id>
+      <id>T1016</id>
+    </mitre>
+  </rule>
+</group>
+
 <group name="windows,sysmon,persistence,">
   <rule id="100202" level="8">
     <if_sid>61603</if_sid>
@@ -26,6 +42,85 @@
     <description>Persistence: Scheduled Task deleted via schtasks.exe</description>
     <mitre>
       <id>T1053.005</id>
+    </mitre>
+  </rule>
+
+  <rule id="100205" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">sc.exe</field>
+    <field name="win.eventdata.commandLine">create</field>
+    <description>Persistence: Windows Service created via sc.exe</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+  </rule>
+
+  <rule id="100206" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">sc.exe</field>
+    <field name="win.eventdata.commandLine">config</field>
+    <description>Persistence: Windows Service modified via sc.exe</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+  </rule>
+
+  <rule id="100207" level="10">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">sc.exe</field>
+    <field name="win.eventdata.commandLine">delete</field>
+    <description>Defense Evasion: Windows Service deleted via sc.exe</description>
+    <mitre>
+      <id>T1543.003</id>
+      <id>T1070.004</id>
+    </mitre>
+  </rule>
+
+  <rule id="100208" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">net.exe</field>
+    <field name="win.eventdata.commandLine">start</field>
+    <description>Persistence: Service started via net.exe</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+  </rule>
+</group>
+
+<group name="windows,sysmon,collection,">
+  <rule id="100210" level="7">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.commandLine">Compress-Archive</field>
+    <description>Collection: Data archived via PowerShell Compress-Archive</description>
+    <mitre>
+      <id>T1560.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100211" level="7">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">rar.exe</field>
+    <description>Collection: Data archived via rar.exe</description>
+    <mitre>
+      <id>T1560.001</id>
+    </mitre>
+  </rule>
+
+  <rule id="100212" level="7">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.commandLine">Get-Clipboard</field>
+    <description>Collection: Clipboard data accessed via Get-Clipboard</description>
+    <mitre>
+      <id>T1115</id>
+    </mitre>
+  </rule>
+
+  <rule id="100213" level="7">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.commandLine">Get-Keystrokes</field>
+    <description>Collection: Keystroke capture via Get-Keystrokes</description>
+    <mitre>
+      <id>T1056.001</id>
     </mitre>
   </rule>
 </group>
