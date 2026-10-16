@@ -1,0 +1,31 @@
+<group name="windows,sysmon,persistence,">
+  <rule id="100202" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">schtasks.exe</field>
+    <field name="win.eventdata.commandLine">/create</field>
+    <description>Persistence: Scheduled Task created via schtasks.exe</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+  </rule>
+
+  <rule id="100203" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">schtasks.exe</field>
+    <field name="win.eventdata.commandLine">/change</field>
+    <description>Persistence: Scheduled Task modified via schtasks.exe</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+  </rule>
+
+  <rule id="100204" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image">schtasks.exe</field>
+    <field name="win.eventdata.commandLine">/delete</field>
+    <description>Persistence: Scheduled Task deleted via schtasks.exe</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+  </rule>
+</group>
