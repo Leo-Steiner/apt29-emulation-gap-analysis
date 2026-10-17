@@ -1,4 +1,4 @@
-# APT29 Emulation & Detection Gap Analysis
+[deepseek_text_20261017_512bc6.txt](https://github.com/user-attachments/files/33610701/deepseek_text_20261017_512bc6.txt)# APT29 Emulation & Detection Gap Analysis
 
 **A self-owned Azure lab project emulating APT29 (Cozy Bear / Midnight Blizzard) with MITRE Caldera, measuring detection gaps with Wazuh + Sysmon, closing them with custom rules, and re-testing.**
 
@@ -76,34 +76,9 @@
 ---
 
 ## Repository Structure
-apt29-emulation-gap-analysis/
-├── README.md ← you are here
-├── LICENSE ← MIT
-├── docs/
-│ ├── apt29-profile.md ← group profile + justification
-│ ├── attack-scenario.md ← attack narrative
-│ ├── methodology.md ← approach in own words
-│ ├── architecture.png ← lab diagram
-│ ├── phase6-summary.md ← gap analysis summary
-│ └── defense-recommendations.md ← technical + non-technical
-├── detection/
-│ ├── custom-wazuh-rules.xml ← 13 custom rules
-│ └── sysmon-config-notes.md ← Sysmon config changes
-├── adversary/
-│ └── apt29-profile-notes.md ← TTP table with ATT&CK IDs
-├── navigator/
-│ ├── run2_heatmap_before.json ← before fixes
-│ └── run2_heatmap_after.json ← after fixes
-└── evidence/
-├── phase2_azure_portal_baseline.png
-├── phase3_agent_active.png
-├── caldera_dashboard.png
-├── caldera_agents.png
-├── wazuh_discover_alerts1.png
-├── wazuh_discover_alerts2.png
-├── run2_caldera_operation.csv ← attacker-side ground truth
-├── run2_detection_matrix.md ← 30 techniques with verdicts
-└── run2_before_after.md ← before/after comparison
+
+<img width="707" height="761" alt="output_tree" src="https://github.com/user-attachments/assets/95bfb994-4e89-46e4-8a0b-4190e8cdbb1e" />
+
 
 
 ---
