@@ -6,11 +6,11 @@
 
 ## Headline Result
 
-**Detection Coverage improved from 0 % to 43 % after implementing 5 detection fixes.**
+**Detection Coverage improved from 0 % to 30 % after implementing 5 detection fixes.**
 
 - **Initial state (Run 2):** 0 of 30 techniques detected
-- **After fixes:** 13 of 30 techniques detected
-- **Improvement:** +43 percentage points
+- **After fixes:** 9 of 30 techniques detected
+- **Improvement:** +30 percentage points
 
 ---
 
@@ -66,10 +66,10 @@
 | Metric | Run 2 (before fixes) | After fixes |
 |---|---|---|
 | Total techniques | 30 | 30 |
-| Detected | 0 | 13 |
+| Detected | 0 | 9 |
 | Partial | 3 | 3 |
-| Missed | 27 | 14 |
-| **Coverage** | **0 %** | **43 %** |
+| Missed | 18 | 14 |
+| **Coverage** | **0 %** | **30 %** |
 
 **Heatmaps:** See `navigator/run2_heatmap_before.json` and `navigator/run2_heatmap_after.json`.
 

@@ -19,6 +19,7 @@ Die Attacker-Seite (Caldera-CSV) wurde mit der Defender-Seite (Wazuh-Alerts) ver
 | Fix 2 | LSASS ProcessAccess | T1003.001 | Sysmon ProcessAccess + ProcessAccessConfig |
 | Fix 3 | Scheduled Task | T1053.005 | Custom Wazuh-Regeln 100202–100204 |
 | Fix 4 | Persistence Services | T1543.003 | Custom Wazuh-Regeln 100205–100208 |
+| Fix 5 | Collection | T1560.001, T1115, T1056.001 | Custom Wazuh-Regeln 100210–100213 |
 
 ## Ergebnis
 
@@ -26,10 +27,12 @@ Die Attacker-Seite (Caldera-CSV) wurde mit der Defender-Seite (Wazuh-Alerts) ver
 - **Nach Fixes:** 30 % Detection Coverage (9 von 30)
 - **Verbesserung:** +30 Prozentpunkte
 
+*(Hinweis zur Methodik: Eine naive Zuordnung von Fähigkeitsnamen zu Regeln würde 13/30 ergeben. Fähigkeiten, deren tatsächlich ausgeführter Befehl nicht mit der zuständigen Regel übereinstimmte, wurden jedoch ausgeschlossen. Dies ergibt die streng verifizierten 9/30.)*
+
 ## Dokumentierte Gaps
 
 Die folgenden Techniken bleiben auch nach den Fixes undetektiert:
-- Collection: T1560.001, T1113, T1115
+- Collection: T1113, T1115 (teilweise), T1056.001
 - Discovery: T1057, T1007, T1069, T1087, T1012, T1018, T1049
 - Defense Evasion: T1036, T1112
 - Credential Access: T1555.003, T1552.004

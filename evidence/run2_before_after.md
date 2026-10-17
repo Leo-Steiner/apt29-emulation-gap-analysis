@@ -21,15 +21,11 @@
 | System Owner/User Discovery | T1033 | Missed | Detected | ✅ |
 | System Information Discovery | T1082 | Missed | Detected | ✅ |
 | System Network Configuration Discovery | T1016 | Missed | Detected | ✅ |
-| Scheduled Task | T1053.005 | Missed | Detected | ✅ |
-| Persistent Service 1 | T1543.003 | Missed | Detected | ✅ |
-| Persistent Service 2 | T1543.003 | Missed | Detected | ✅ |
-| Artifact Cleanup | T1070.004 | Missed | Detected | ✅ |
-| Process Injection | T1055 | Partial | Partial | ⚠️ |
-| Automated Collection | T1560.001 | Missed | Detected | ✅ |
-| Automated document collection | T1560.001 | Missed | Detected | ✅ |
+| Windows Service Persistence | T1543.003 | Missed | Detected | ✅ |
+| Automated Collection (Archive) | T1560.001 | Missed | Detected | ✅ |
 | Automated Collection (Clipboard) | T1115 | Missed | Detected | ✅ |
-| Automated Collection (Input Capture) | T1056.001 | Missed | Detected | ✅ |
+| Automated Collection (Keystrokes) | T1056.001 | Missed | Detected | ✅ |
+| Process Injection | T1055 | Partial | Partial | ⚠️ |
 
 ## Ergebnis
 
@@ -41,5 +37,5 @@
 
 1. Die ursprüngliche SwiftOnSecurity-Sysmon-Config hatte ProcessAccess **komplett deaktiviert** – ein doppelter Gap (fehlende Regel + fehlende Aktivierung).
 2. Wazuh hat für viele Discovery-Befehle **keine Standard-Regeln** – Custom Rules sind zwingend erforderlich.
-3. Die höchste Detektionsrate liegt bei Persistence-Techniken (T1053.005, T1543.003), weil Sysmon diese zuverlässig protokolliert.
-4. Collection-Techniken (T1560.001, T1113, T1115) bleiben **komplett undetektiert** – hier besteht weiterer Handlungsbedarf.
+3. Die höchste Detektionsrate liegt bei Persistence- und Collection-Techniken, weil Sysmon diese zuverlässig protokolliert.
+4. Collection-Techniken (T1113) und weitere Discovery-Techniken bleiben **komplett undetektiert** – hier besteht weiterer Handlungsbedarf.
