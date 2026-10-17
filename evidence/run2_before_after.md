@@ -21,8 +21,10 @@
 | System Owner/User Discovery | T1033 | Missed | Detected | ✅ |
 | System Information Discovery | T1082 | Missed | Detected | ✅ |
 | System Network Configuration Discovery | T1016 | Missed | Detected | ✅ |
-| Windows Service Persistence | T1543.003 | Missed | Detected | ✅ |
-| Automated Collection (Archive) | T1560.001 | Missed | Detected | ✅ |
+| Windows Service Persistence (Service 1) | T1543.003 | Missed | Detected | ✅ |
+| Windows Service Persistence (Service 2) | T1543.003 | Missed | Partial | ⚠️ |
+| Automated Collection (Archive via Compress-Archive) | T1560.001 | Missed | Detected | ✅ |
+| Automated Collection (Archive via rar.exe) | T1560.001 | Missed | Detected | ✅ |
 | Automated Collection (Clipboard) | T1115 | Missed | Detected | ✅ |
 | Automated Collection (Keystrokes) | T1056.001 | Missed | Detected | ✅ |
 | Process Injection | T1055 | Partial | Partial | ⚠️ |

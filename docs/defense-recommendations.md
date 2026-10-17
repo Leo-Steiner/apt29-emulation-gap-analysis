@@ -2,7 +2,7 @@
 
 **Basis:** Gap-Analyse aus Run 2 (2026-10-16, 18:19–18:59 UTC)
 **Detection Coverage vor Fixes:** 0 % (0 von 30 Fähigkeiten)
-**Detection Coverage nach Fixes:** 43 % (13 von 30 Fähigkeiten)
+**Detection Coverage nach Fixes:** 30 % (9 von 30 Fähigkeiten)
 
 ---
 
@@ -10,7 +10,7 @@
 
 ### 1.1 Detection Engineering (umgesetzt)
 
-Die folgenden Wazuh-Regeln wurden im Rahmen der Gap-Analyse implementiert und haben die Detection Coverage von 0 % auf 43 % gesteigert:
+Die folgenden Wazuh-Regeln wurden im Rahmen der Gap-Analyse implementiert und haben die Detection Coverage von 0 % auf 30 % gesteigert (12 Custom Rules über 5 Fixes):
 
 | Rule ID | Ziel | ATT&CK ID | Status |
 |---|---|---|---|
@@ -161,8 +161,8 @@ Die NIS2-Richtlinie (EU 2022/2555) verpflichtet Betreiber kritischer Infrastrukt
 
 ## 5. Fazit
 
-Die Gap-Analyse hat gezeigt, dass ein SIEM-gestütztes Detection-Setup (Wazuh + Sysmon) in der Lage ist, einen erheblichen Teil der APT29-Techniken zu erkennen, wenn die Regeln entsprechend konfiguriert sind. Die Detection Coverage konnte durch 5 gezielte Fixes von 0 % auf 43 % gesteigert werden.
+Die Gap-Analyse hat gezeigt, dass ein SIEM-gestütztes Detection-Setup (Wazuh + Sysmon) in der Lage ist, einen erheblichen Teil der APT29-Techniken zu erkennen, wenn die Regeln entsprechend konfiguriert sind. Die Detection Coverage konnte durch 5 gezielte Fixes von 0 % auf 30 % gesteigert werden.
 
-Die größten verbleibenden Lücken liegen im Bereich Collection (T1113, T1115, T1056.001) und Credential Access (T1555.003, T1552.004). Hier sind weitere Custom Rules und Preventive Controls erforderlich.
+Die größten verbleibenden Lücken liegen im Bereich Process Discovery (T1057) und Credential Access (T1555.003, T1552.004) sowie im Bereich der Defense Evasion (T1036). Hier sind weitere Custom Rules und Preventive Controls erforderlich.
 
 Für einen umfassenden Schutz gegen APT29 sind technische Maßnahmen allein nicht ausreichend. Sie müssen durch organisatorische Prozesse, Schulungen und regulatorische Compliance ergänzt werden. Nur ein mehrschichtiger Ansatz (Defense in Depth) kann das Risiko eines erfolgreichen APT-Angriffs signifikant reduzieren.

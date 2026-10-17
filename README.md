@@ -85,7 +85,7 @@
 | Fix 4 | Persistence Services | T1543.003 | Custom Wazuh rules 100205–100208 |
 | Fix 5 | Collection | T1560.001, T1115, T1056.001 | Custom Wazuh rules 100210–100213 |
 
-**Rule file:** See `detection/custom-wazuh-rules.xml`.
+**Rule file:** See `detection/custom-wazuh-rules.xml` (12 custom rules across 5 fixes).
 
 ---
 

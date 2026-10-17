@@ -96,10 +96,12 @@ For each technique executed by Caldera:
 | Partial (before fixes) | 3 |
 | Missed (before fixes) | 27 |
 | **Coverage before fixes** | **0 %** |
-| Detected (after fixes) | 13 |
+| Detected (after fixes) | 9 |
 | Partial (after fixes) | 3 |
-| Missed (after fixes) | 14 |
-| **Coverage after fixes** | **43 %** |
+| Missed (after fixes) | 18 |
+| **Coverage after fixes** | **30 %** |
+
+*(Note on methodology: A naive mapping of ability names to rules would suggest 13 detections. However, abilities whose executed command did not match the responsible rule were excluded. This yields the strictly verified 9/30.)*
 
 ---
 
