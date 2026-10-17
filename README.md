@@ -25,22 +25,8 @@
 ---
 
 ## Architecture
-┌─────────────────────────────────────────────────────────┐
-│ Azure Resource Group: rg-apt29-lab (swedencentral) │
-│ │
-│ ┌──────────────────────┐ ┌──────────────────────┐ │
-│ │ vm-defender (Linux) │ │ vm-target (Windows) │ │
-│ │ ─────────────────── │ │ ─────────────────── │ │
-│ │ • Caldera C2 Server │ ───► │ • Sandcat Agent │ │
-│ │ • Wazuh Manager │ ◄─── │ • Wazuh Agent │ │
-│ │ • Wazuh Dashboard │ │ • Sysmon v15.22 │ │
-│ │ │ │ • White background │ │
-│ │ 10.0.0.4 │ │ 10.0.0.5 │ │
-│ └──────────────────────┘ └──────────────────────┘ │
-│ │
-│ VNet: vnet-apt29 (10.0.0.0/24) │
-│ NSG: SSH/RDP/Caldera/Wazuh restricted to operator IP │
-└─────────────────────────────────────────────────────────┘
+
+<img width="633" height="481" alt="image" src="https://github.com/user-attachments/assets/25f242b9-4825-469e-8625-d9e048fded41" />
 
 
 **Diagram:** See `docs/architecture.png`.
