@@ -119,7 +119,3 @@ MIT – see `LICENSE`.
 
 ---
 
-## Status
-
-**Private until grade is published.** This repository does not contain the IU examination task text or the full submitted report. It shows the lab and the craft, in my own words.
-
