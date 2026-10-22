@@ -1,4 +1,4 @@
-[deepseek_text_20261017_512bc6.txt](https://github.com/user-attachments/files/33610701/deepseek_text_20261017_512bc6.txt)# APT29 Emulation & Detection Gap Analysis
+# APT29 Emulation & Detection Gap Analysis
 
 **A self-owned Azure lab project emulating APT29 (Cozy Bear / Midnight Blizzard) with MITRE Caldera, measuring detection gaps with Wazuh + Sysmon, closing them with custom rules, and re-testing.**
 
