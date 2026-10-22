@@ -29,8 +29,6 @@
 <img width="633" height="481" alt="image" src="https://github.com/user-attachments/assets/25f242b9-4825-469e-8625-d9e048fded41" />
 
 
-**Diagram:** See `docs/architecture.png`.
-
 ---
 
 ## Tools used
@@ -57,7 +55,6 @@
 | Missed | 18 | 14 |
 | **Coverage** | **0 %** | **30 %** |
 
-**Heatmaps:** See `navigator/run2_heatmap_before.json` and `navigator/run2_heatmap_after.json`.
 
 ---
 
