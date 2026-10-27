@@ -52,7 +52,7 @@
 | Total techniques | 30 | 30 |
 | Detected | 0 | 9 |
 | Partial | 3 | 3 |
-| Missed | 18 | 14 |
+| Missed | 27 | 18 |
 | **Coverage** | **0 %** | **30 %** |
 
 
